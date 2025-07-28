@@ -1,4 +1,5 @@
 const urlform = document.getElementById("urlform");
+const beUrl = "https://url-shortener-lpie.onrender.com";
 
 urlform.addEventListener("submit", async (event) => {
   event.preventDefault();
