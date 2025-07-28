@@ -12,7 +12,7 @@ urlform.addEventListener("submit", async (event) => {
   }
 
   try {
-    const response = await fetch(`${beUrl}` / url``, {
+    const response = await fetch(`${beUrl}/url`, {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ url }),
