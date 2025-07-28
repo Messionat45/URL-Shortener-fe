@@ -1,5 +1,4 @@
 const urlform = document.getElementById("urlform");
-const beUrl = process.env.BE_URL || process.env.LOCAL_BE_URL;
 
 urlform.addEventListener("submit", async (event) => {
   event.preventDefault();
