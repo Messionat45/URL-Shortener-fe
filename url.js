@@ -24,7 +24,10 @@ urlform.addEventListener("submit", async (event) => {
     console.log(data);
 
     if (response.ok) {
-      shorturlDiv.innerHTML = `<p>Shortened URL: <a href="${data.shorturl}">${data.shorturl}</a></p>`;
+      shorturlDiv.innerHTML = `
+      <h4> Generated Short URL 😁 <h4>
+
+      <p>Shortened URL: <a href="${data.shorturl}">${data.shorturl}</a></p>`;
     } else {
       alert("something went worng");
     }
