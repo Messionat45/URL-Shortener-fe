@@ -6,7 +6,7 @@ displayUrls.addEventListener("click", async (event) => {
   event.preventDefault();
 
   try {
-    const response = await fetch(`${beUrl}/display`, {
+    const response = await fetch(`${beUrl}/url`, {
       method: "get",
       credentials: "include",
     });
