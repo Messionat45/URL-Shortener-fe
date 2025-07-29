@@ -5,7 +5,7 @@ urlform.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const url = document.getElementById("url").value;
-  const shorturl = document.getElementById("shortUrl");
+  const shorturlDiv = document.getElementById("shortUrl");
 
   if (!url) {
     alert("URL field cannot be empty");
@@ -24,9 +24,9 @@ urlform.addEventListener("submit", async (event) => {
     console.log(data);
 
     if (response.ok) {
-      alert(data.shortURL);
+      shorturlDiv.innerHTML = `<p>Shortened URL: <a href="${data.shorturl}">${data.shorturl}</a></p>`;
     } else {
-      alert(data);
+      alert("something went worng");
     }
   } catch (error) {
     console.log(error.message);
