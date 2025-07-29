@@ -24,7 +24,7 @@ urlform.addEventListener("submit", async (event) => {
     console.log(data);
 
     if (response.ok) {
-      alert(data.shortUrl);
+      alert(data.shortURL);
     } else {
       alert(data);
     }
