@@ -38,8 +38,19 @@ const showUrls = (urls) => {
 
     const block = `
     <div> 
-    <p> <strong> Short:</strong> <a href="${shortUrl}" >${shortUrl}</a></p>
-    <p> <strong> Long:</strong> <a href="${longUrl}" >${longUrl}</a></p>
+    <table> 
+      <thead> 
+              <tr>
+          <th>Long URL</th><th>Short URL</th>
+              </tr>
+      </thead>
+    <tbody> 
+      <tr> 
+          <td><a href="${shortUrl}" >${shortUrl}</a></td>
+          <td><a href="${longUrl}" >${longUrl}</a></td>
+     </tr>
+    </tbody>
+    </table>
 </div>
     `;
 
