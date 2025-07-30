@@ -2,9 +2,7 @@ const beUrl = "https://url-shortener-lpie.onrender.com";
 
 const displayUrls = document.getElementById("displayUrls");
 
-displayUrls.addEventListener("click", async (event) => {
-  event.preventDefault();
-
+window.onload = async () => {
   try {
     const response = await fetch(`${beUrl}/url`, {
       method: "get",
@@ -22,7 +20,7 @@ displayUrls.addEventListener("click", async (event) => {
     console.log(error);
     alert("something went wrong");
   }
-});
+};
 
 const showUrls = (urls) => {
   const displayUrlsDiv = document.getElementById("displayUrls");
@@ -30,7 +28,7 @@ const showUrls = (urls) => {
   displayUrlsDiv.innerHTML = "";
 
   if (urls.length === 0) {
-    displayUrlsDiv = "<p> NO URL's Present";
+    displayUrlsDiv.innerHTML = "<p> NO URL's Present";
     return;
   }
 
