@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>URL Shortner</title>
   </head>
-  <body>
-    <h2>Your Shortened URLs</h2>
-    <div id="displayUrls"></div>
+  <body class="h-screen bg-[#eef2ff]">
+    <div class="text-center">
+      <h2 class="font-bold text-gray-500 text-2xl shadow-lg py-4 bg-teal-300">
+        Your Short URL's
+      </h2>
+    </div>
+    <div id="displayUrls" class="mx-10 px-4"></div>
 
     <script src="display.js"></script>
   </body>

@@ -3,19 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>URL Shortner</title>
   </head>
-  <body>
-    <div>
-      <form action="" id="loginform">
-        <label for="username">Username: </label>
-        <input type="text" id="username" name="username" />
+  <body class="bg-[#eef2ff] h-screen flex items-center justify-center">
+    <div class="bg-[#faf5ff] p-6 w-[400px] rounded-lg shadow-lg">
+      <h1 class="text-[#4f46e5] text-center m-10 font-bold">URL SHORTENER</h1>
+      <form action="" id="loginform" class="space-y-4 text-center">
+        <div>
+          <label
+            for="username"
+            class="block text-[13px] font-medium text-gray-500"
+            >USERNAME
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="border border-gray-300 m-2 shadow-sm rounded-sm"
+          />
+        </div>
+        <div>
+          <label
+            for="password"
+            class="block text-[13px] font-medium text-gray-500"
+            >PASSWORD
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="border border-gray-300 m-2 shadow-sm rounded-sm"
+          />
+        </div>
 
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" />
-
-        <button type="submit">Login In</button>
+        <div>
+          <button
+            type="submit"
+            class="bg-gray-300 mt-4 px-2 py-1 rounded-sm text-[13px] text-[#64748b] font-bold shadow-sm hover:text-white hover:bg-gray-600"
+          >
+            LOGIN
+          </button>
+        </div>
       </form>
+      <div>
+        <p class="pt-3 text-[11px] text-center">
+          Dont have an Account?
+          <a href="./index.html">
+            <span class="underline text-blue-500"> Create New</span></a
+          >
+        </p>
+      </div>
     </div>
     <script src="./login.js"></script>
   </body>

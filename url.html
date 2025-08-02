@@ -3,18 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>URL Shortner</title>
   </head>
-  <body>
-    <div>
-      <form action="" id="urlform">
-        <label for="url">URL: </label>
-        <input type="text" id="url" name="url" />
-
-        <button type="submit">Get Short URL</button>
-      </form>
-      <div>
-        <button onclick="window.location.href='display.html'">MY URL's</button>
+  <body class="bg-[#eef2ff]">
+    <div class="relative">
+      <div class="absolute top-0 right-0">
+        <button
+          onclick="window.location.href='display.html'"
+          class="px-2 mt-4 mr-4 rounded-sm shadow-lg py-1 bg-[#3b82f6] text-white font-bold text-[13px] hover:bg-[#a5b4fc] hover:text-[#2563eb]"
+        >
+          MY URL's
+        </button>
+      </div>
+    </div>
+    <div class="h-screen flex items-center justify-center">
+      <div
+        class="p-6 sm:w-[500px] md:w-[700px] shadow-lg bg-[#faf5ff] rounded-lg"
+      >
+        <form action="" id="urlform" class="space-y-4 text-center">
+          <div>
+            <label
+              for="url"
+              class="block text-[#4f46e5] mt-10 mb-4 font-bold text-2xl"
+              >URL
+            </label>
+            <input
+              type="text"
+              id="url"
+              name="url"
+              placeholder="Enter your URL here..."
+              class="shadow-lg rounded-sm border border-gray-300 sm:w-80 md:w-150 text-sm p-2"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="bg-[#4f46e5] shadow-lg rounded-sm text-white px-2 py-1 font-bold shadow-lg hover:text-[#2563eb] hover:bg-[#f5d0fe]"
+            >
+              Get Short URL
+            </button>
+          </div>
+        </form>
       </div>
     </div>
     <div id="shortUrl"></div>
