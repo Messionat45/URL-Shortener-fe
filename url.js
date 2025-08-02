@@ -4,7 +4,7 @@ const beUrl = "https://url-shortener-lpie.onrender.com";
 urlform.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const url = document.getElementById("url").value;
+  const url = document.getElementById("url").value.trim();
   const shorturlDiv = document.getElementById("shortUrl");
 
   if (!url) {
@@ -25,11 +25,13 @@ urlform.addEventListener("submit", async (event) => {
 
     if (response.ok) {
       shorturlDiv.innerHTML = `
-      <h4> Generated Short URL 😁 <h4>
-
-      <p>Shortened URL: <a href="${data.shorturl}">${data.shorturl}</a></p>`;
+      <div class="bg-white shadow-md rounded-lg p-4 my-4 mx-auto w-[90%] max-w-3xl">
+      <h4 class="text-lg font-semibold text-green-700 mb-2"> Generated Short URL 😁 </h4>
+      <p class="text-sm text-gray-700"> Short URL: <strong class="text-indigo-600"><a href="${data.shorturl}">${data.shorturl}</a></strong></p>
+      </div>`;
+      document.getElementById("url").value = "";
     } else {
-      alert("something went worng");
+      alert("something went worng" + data.message);
     }
   } catch (error) {
     console.log(error.message);
