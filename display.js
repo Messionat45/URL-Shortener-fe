@@ -34,6 +34,7 @@ const showUrls = (urls) => {
   }
 
   urls.forEach((urlObject) => {
+    console.log(urlObject);
     const longUrl = urlObject.longurl;
     const shortUrl = `${beUrl}/s/${urlObject.shorturl}`;
 
